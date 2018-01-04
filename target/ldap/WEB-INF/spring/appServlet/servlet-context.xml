@@ -21,6 +21,15 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-    
-	<context:component-scan base-package="com.thinksys.*"/>
-</beans:beans>
+	<context:component-scan base-package="com.thinksys.ldap.*" />
+	<interceptors>
+        <beans:bean id="webContentInterceptor" class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+                <beans:property name="cacheSeconds" value="0"/>
+                <beans:property name="useExpiresHeader" value="false"/>
+                <beans:property name="useCacheControlHeader" value="true"/>
+                <beans:property name="useCacheControlNoStore" value="true"/>
+            </beans:bean>     
+        </interceptors>
+	
+	
+</beans:beans>	

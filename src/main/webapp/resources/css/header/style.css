@@ -159,17 +159,16 @@ table td, th {
 }
 
 #renderdata {
-	/* margin-top: -22px; */
-	/* float: left; */
-	/* width: 100%; */
+	margin-top: 20px;
+	float: left;
+	width: 100%;
 	position: absolute;
-	/* top: 77px; */
+	top: 77px;
 	background: #4CAF50;
 	padding: 13px;
 	text-align: center;
 	color: #fff;
 	left: 0;
-	right: 0;
 	display: none;
 }
 .pro-head {
