@@ -20,7 +20,7 @@ public class ChangeADpassword {
 
 	private static Logger logger = LoggerFactory.getLogger(ChangeADpassword.class);
 
-
+	
 
 	public static int chnageADPassword(String oldPassword,String newPassword,String user) throws javax.naming.NamingException, IOException{
 
@@ -45,25 +45,37 @@ public class ChangeADpassword {
 		try {
 			LdapContext ctx = new InitialLdapContext(env,null);
 			ModificationItem[] mods = new ModificationItem[2];
+
 			mods[0] = new ModificationItem(DirContext.REMOVE_ATTRIBUTE, new BasicAttribute(passwordAttributeName, oldPassword));
 			mods[1] = new ModificationItem(DirContext.ADD_ATTRIBUTE, new BasicAttribute(passwordAttributeName, newPassword));
-			logger.info("Changed password , Connect to LDAP URL : {}'" , prop.getProperty("ldap.url"));
+
+			logger.info("Changing password for user '" + userName);
 			ctx.modifyAttributes(userName, mods);
-			logger.info("Changed password for user :{} '" , userName);
+			logger.info("Changed password for user '" + userName);
 			ctx.close();
 			return 1;
 		} 
 		catch (Exception e) {
+
 			logger.info(" ChangePass ::  " +e.getMessage());
 			return 0;
 		}
 	}
-
-
+	
+	
 	public static void main(String args[]) throws NamingException, IOException{
-
-
+		
+		
 		int i =ChangeADpassword.chnageADPassword("anuj@123","thinksys@123",  "singh.anuj");
 		System.out.println(i);
+		
+		
+		
+		
 	}
+	
+	
+	
+	
+	
 }
