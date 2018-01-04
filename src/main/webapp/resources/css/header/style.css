@@ -1,0 +1,224 @@
+
+body {
+	margin: 0px;
+	padding: 0;
+	font-family: arial;
+}
+.error {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+
+.msg {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+
+#login-box {
+	width: 300px;
+	padding: 20px;
+	margin: 50px auto;
+	background: #fff;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	/* border: 1px solid #000; */
+}
+
+.topbar1 {
+	text-align: left;
+	background: #26abe2;
+	padding: 10px;
+	border: 1px solid #e2e2e2;
+	box-shadow: 5px 4px 3px #f3ebeb;
+	text-align: center;
+}
+.topbar1 img {
+	float:left;
+}
+
+
+.topbar {
+	text-align: right;
+	background: #f2f2f2;
+	padding: 10px;
+	border: 1px solid #e2e2e2;
+	box-shadow: 5px 4px 3px #f3ebeb;
+}
+
+.topbar .logout-btn {
+	background: #4CAF50;
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 3px;
+	font-size: 13px;
+}
+
+.checklist {
+	background: #c7c7c7;
+	padding: 10px;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+.checklist label {
+	margin: 12px;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.contain {
+	border: 1px solid #e2e2e2;
+	float: left;
+	width: 100%;
+	margin-top: 10px !important;
+}
+
+#checkboxes {
+	float: left;
+}
+
+#checkboxes div {
+	float: left;
+	margin: 10px;
+	text-align: left;
+}
+
+#submitbutton {
+	float: right;
+}
+
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+input[type="text"], select, input[type="password"] {
+	background: #f2f2f2;
+	border: 1px solid #e2e2e2;
+	padding: 7px;
+	width: 100%;
+	margin: 5px 0;
+}
+
+#select_col_Checkboxes {
+	margin-bottom: 10px;
+}
+
+#select_col_Checkboxes div {
+	float: left;
+}
+
+#whereConditionCheckboxes {
+	float: left;
+}
+
+#columnDiv {
+	margin-top: 10px;
+}
+
+.element-center, .contain {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	margin-top: 45px;
+	float: none;
+	display: table;
+	padding: 10px;
+}
+
+table {
+	width: 100%;
+}
+
+table th {
+	background: #c7c7c7;
+	color: #fff;
+}
+
+table td, th {
+	padding: 7px 15px;
+	border: 1px solid #e2e2e2;
+}
+
+#renderdata {
+	/* margin-top: -22px; */
+	/* float: left; */
+	/* width: 100%; */
+	position: absolute;
+	/* top: 77px; */
+	background: #4CAF50;
+	padding: 13px;
+	text-align: center;
+	color: #fff;
+	left: 0;
+	right: 0;
+	display: none;
+}
+.pro-head {
+	/* background: #fff; */
+	/* padding: 30px; */
+	font-size: 28px;
+	/* line-height: 28px; */
+	text-align: center;
+	color: #fff;
+	font-family: arial;
+	/* margin:auto; */
+	/* float:none; */
+	width: 30%;
+	margin-right: 9%;
+}
+
+#select_col_Checkboxes {
+	float: left;
+}
+form {
+    /* /* border: 3px solid #f1f1f1; */ */
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 18px;
+    height: 42px;
+}
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+ 
