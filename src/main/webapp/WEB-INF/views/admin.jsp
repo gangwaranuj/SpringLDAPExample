@@ -78,7 +78,7 @@
 				ldap_groupsearch : '',
 				ldap_managerpassword : ''
 			};
-			_data.ldap_managerUid = document.getElementById("username").value;
+			_data.ldap_managerUid = document.getElementById("username").value != ''? document.getElementById("username").value:null;
 			_data.ldap_url = document.getElementById("ldapurl").value != '' ? document.getElementById("ldapurl").value:null;
 			_data.ldap_managerdn = document.getElementById("managerdn").value != '' ? document
 					.getElementById("managerdn").value

@@ -54,7 +54,7 @@ public class ChangeADpassword {
 			return 1;
 		} 
 		catch (Exception e) {
-			logger.info(" ChangePass ::  " +e.getMessage());
+			logger.error(" Changed password error ::  {}",e.getMessage());
 			return 0;
 		}
 	}

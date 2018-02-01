@@ -61,8 +61,8 @@ public class Utility {
 				properties1.setProperty("ldap.searchBase", basesearch);
 			if (groupserach!=null)
 				properties1.setProperty("ldap.groupsearch", groupserach);
-			if(manageruid!=null)
-				properties1.setProperty("ldap.magangerUid",manageruid);
+			if( manageruid!=null)
+				properties1.setProperty("ldap.magangerUid","uid="+ manageruid);
 
 			FileOutputStream fos = new FileOutputStream(new File(Utility.class.getClassLoader().getResource("ldap.properties").toURI())) ;
 			properties1.save(fos);

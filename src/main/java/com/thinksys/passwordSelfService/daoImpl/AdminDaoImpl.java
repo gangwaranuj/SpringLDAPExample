@@ -20,7 +20,7 @@ public class AdminDaoImpl implements AdminDao {
 	public Response setproperties(LdapConfigurationBean property) throws URISyntaxException, IOException {
 
 		Response response=new Response();
-		int result= Utility.setldapProperties(property.getLdap_url(), property.getLdap_managerdn(), property.getLdap_managerpassword(), property.getLdap_basesearch(), property.getLdap_groupsearch(),"uid="+property.getManagerUid());	
+		int result= Utility.setldapProperties(property.getLdap_url(), property.getLdap_managerdn(), property.getLdap_managerpassword(), property.getLdap_basesearch(), property.getLdap_groupsearch(),property.getManagerUid());	
 		if(result>0)
 		{   
 			logger.info("AdminDaoImpl ::"+"property file has been updated with !!"+property.toString());

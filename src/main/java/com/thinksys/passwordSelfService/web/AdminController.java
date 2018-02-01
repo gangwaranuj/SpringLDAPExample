@@ -16,16 +16,22 @@ import com.thinksys.passwordSelfService.bean.LdapConfigurationBean;
 import com.thinksys.passwordSelfService.service.AdminService;
 import com.thinksys.passwordSelfService.util.ResponseMessage;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+
 
 @Controller
+@Api(tags= "admin")
 public class AdminController {
 
 	@Autowired
 	AdminService adminservice;
 
+	@ApiOperation(value="update ldap.properties file")
 	@CrossOrigin(origins={"*"})
 	@RequestMapping(value = "/set", method = RequestMethod.POST)
-	public @ResponseBody  ResponseMessage setProperties (@RequestBody String requestJson ) throws ConfigurationException, IOException {
+	public @ResponseBody  ResponseMessage setProperties(@ApiParam(name ="requestJson", required=true) @RequestBody String requestJson ) throws ConfigurationException, IOException {
 
 		Gson gson =new Gson();
 		LdapConfigurationBean ldapConfigurationBean = gson.fromJson(requestJson,LdapConfigurationBean.class);
@@ -34,3 +40,4 @@ public class AdminController {
 	}	
 
 }
+

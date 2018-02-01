@@ -3,6 +3,7 @@ package com.thinksys.passwordSelfService.serviceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.thinksys.passwordSelfService.dao.LdapDao;
@@ -12,6 +13,7 @@ import com.thinksys.passwordSelfService.util.Constants;
 import com.thinksys.passwordSelfService.util.ResponseMessage;
 
 @Service
+@Qualifier("ldapServiceImpl")
 public class LdapServiceImpl  implements LdapService{
 
 
@@ -44,6 +46,14 @@ public class LdapServiceImpl  implements LdapService{
 			logger.error(" LdapServiceImpl ::  " , e);
 		}
 		return jsonResponse;
+	}
+
+
+
+	@Override
+	public void test(String etc) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
